@@ -607,6 +607,106 @@ footer span{
 }
 .pay-option span.label{position:relative;z-index:2}
 
+
+/* ===== REFERENCE-STYLE STORE HERO CARD ===== */
+.hero.hero-banner-wrap{
+  min-height:auto;
+  display:block;
+  padding:58px 5% 52px;
+  background:
+    radial-gradient(circle at 20% 20%,rgba(255,0,60,.12),transparent 32%),
+    radial-gradient(circle at 85% 75%,rgba(120,0,255,.10),transparent 38%),
+    #08080b;
+  border:0;
+  box-shadow:none;
+}
+.store-hero-card{
+  max-width:1050px;
+  margin:0 auto;
+  padding:48px;
+  min-height:430px;
+  border:1px solid rgba(255,23,79,.7);
+  border-radius:28px;
+  background:linear-gradient(145deg,rgba(25,8,17,.96),rgba(5,5,8,.98));
+  box-shadow:0 0 35px rgba(255,23,79,.12),inset 0 0 40px rgba(255,23,79,.025);
+  position:relative;
+  overflow:hidden;
+}
+.store-hero-card:before{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  border-radius:28px;
+  background:linear-gradient(115deg,transparent 25%,rgba(255,23,79,.12),transparent 60%);
+  pointer-events:none;
+}
+.hero-topline{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+  position:relative;
+  z-index:2;
+}
+.hero-thumb{
+  width:105px;
+  height:105px;
+  object-fit:cover;
+  border-radius:20px;
+  border:1px solid rgba(255,23,79,.85);
+  box-shadow:0 0 22px rgba(255,23,79,.28);
+}
+.hero-tag{
+  padding:12px 24px;
+  border-radius:30px;
+  border:1px solid rgba(255,23,79,.8);
+  background:rgba(255,23,79,.10);
+  color:#ff476f;
+  font-weight:700;
+  font-size:13px;
+  letter-spacing:.5px;
+  box-shadow:0 0 18px rgba(255,23,79,.18);
+}
+.hero-copy{
+  position:relative;
+  z-index:2;
+  margin-top:38px;
+}
+.hero-copy h1{
+  font-family:Orbitron,sans-serif;
+  font-size:clamp(32px,5vw,58px);
+  margin-bottom:14px;
+  line-height:1.08;
+}
+.hero-copy h1 span{color:#ff174f;text-shadow:0 0 25px rgba(255,23,79,.6)}
+.hero-copy p{
+  color:#aaa;
+  max-width:700px;
+  font-size:16px;
+  line-height:1.75;
+  margin-bottom:30px;
+}
+.hero-view-btn{
+  width:100%;
+  min-height:58px;
+  border-radius:14px;
+  font-size:16px;
+  background:linear-gradient(90deg,#4d000b,#ff174f,#7b001e);
+  border:1px solid rgba(255,23,79,.9);
+  box-shadow:0 0 28px rgba(255,23,79,.22),inset 0 0 20px rgba(255,255,255,.025);
+}
+.hero-view-btn:hover{box-shadow:0 0 40px rgba(255,23,79,.42);transform:translateY(-2px)}
+@media(max-width:700px){
+  .hero.hero-banner-wrap{padding:42px 4% 35px}
+  .store-hero-card{padding:30px 24px;min-height:0;border-radius:22px}
+  .hero-thumb{width:88px;height:88px;border-radius:16px}
+  .hero-tag{padding:9px 15px;font-size:11px}
+  .hero-copy{margin-top:28px}
+  .hero-copy p{font-size:14px}
+  .hero-view-btn{min-height:56px}
+}
+
+
 </style>
 </head>
 
@@ -624,27 +724,17 @@ footer span{
   <button class="menu-btn" onclick="openPayment()">Buy</button>
 </header>
 
-<section class="hero" id="home">
-  <div class="hero-content">
-    <div class="badge">NEXT LEVEL GAMING EXPERIENCE</div>
-
-    <h1>PLAY HARD.<br><span>DOMINATE.</span></h1>
-
-    <p>
-      Upgrade your gaming experience with premium sensitivity tools,
-      optimized settings and a smooth competitive setup.
-    </p>
-
-    <div class="buttons">
-      <a href="#plans" class="btn btn-primary">Explore Plans</a>
-      <a href="https://t.me/Insane_opss" target="_blank" class="btn btn-outline">
-        Telegram Support
-      </a>
+<section class="hero hero-banner-wrap" id="home">
+  <div class="store-hero-card">
+    <div class="hero-topline">
+      <img class="hero-thumb" src="assets/insane-banner.jpg" alt="INSANE OPSS">
+      <span class="hero-tag">HOT RELEASE</span>
     </div>
-  </div>
-
-  <div class="hero-art">
-    <div class="power">⚡</div>
+    <div class="hero-copy">
+      <h1>INSANE <span>OPSS</span></h1>
+      <p>Premium gaming setup with optimized sensitivity and performance-focused features for a smoother gameplay experience.</p>
+      <button class="btn btn-primary hero-view-btn" onclick="openPayment()">View Details&nbsp; →</button>
+    </div>
   </div>
 </section>
 
