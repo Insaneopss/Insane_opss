@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INSANE OPSS | Premium Gaming</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Poppins,sans-serif;
+  background:#050507;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 15% 20%,rgba(255,0,70,.12),transparent 30%),
+    radial-gradient(circle at 85% 70%,rgba(110,0,255,.13),transparent 35%);
+  z-index:-1;
+}
+
+header{
+  width:100%;
+  padding:22px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  background:rgba(5,5,7,.75);
+  backdrop-filter:blur(18px);
+  position:sticky;
+  top:0;
+  z-index:50;
+}
+
+.logo{
+  font-family:Orbitron,sans-serif;
+  font-size:21px;
+  font-weight:800;
+  letter-spacing:2px;
+}
+
+.logo span{
+  color:#ff174f;
+  text-shadow:0 0 18px #ff174f;
+}
+
+nav{
+  display:flex;
+  gap:28px;
+}
+
+nav a{
+  color:#aaa;
+  text-decoration:none;
+  font-size:13px;
+  transition:.3s;
+}
+
+nav a:hover{
+  color:#ff285b;
+}
+
+.menu-btn{
+  display:none;
+  border:1px solid #333;
+  background:#111;
+  color:#fff;
+  padding:9px 12px;
+  border-radius:8px;
+}
+
+.hero{
+  min-height:650px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
+  padding:85px 7% 70px;
+  position:relative;
+}
+
+.hero-content{
+  max-width:650px;
+}
+
+.badge{
+  display:inline-block;
+  padding:8px 15px;
+  border:1px solid rgba(255,30,90,.5);
+  background:rgba(255,20,75,.08);
+  color:#ff4771;
+  border-radius:30px;
+  font-size:11px;
+  letter-spacing:2px;
+  margin-bottom:25px;
+}
+
+h1{
+  font-family:Orbitron,sans-serif;
+  font-size:clamp(38px,6vw,75px);
+  line-height:1.08;
+  letter-spacing:2px;
+  margin-bottom:24px;
+}
+
+h1 span{
+  color:#ff174f;
+  text-shadow:0 0 30px rgba(255,23,79,.65);
+}
+
+.hero p{
+  color:#999;
+  font-size:15px;
+  line-height:1.9;
+  max-width:510px;
+  margin-bottom:35px;
+}
+
+.buttons{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  padding:14px 25px;
+  border-radius:8px;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:700;
+  cursor:pointer;
+  border:none;
+  transition:.3s;
+}
+
+.btn-primary{
+  color:#fff;
+  background:linear-gradient(135deg,#ff174f,#a900ff);
+  box-shadow:0 0 25px rgba(255,23,79,.22);
+}
+
+.btn-primary:hover{
+  transform:translateY(-3px);
+  box-shadow:0 0 35px rgba(255,23,79,.5);
+}
+
+.btn-outline{
+  color:#ddd;
+  background:#111116;
+  border:1px solid #333;
+}
+
+.btn-outline:hover{
+  border-color:#ff174f;
+  color:#ff4771;
+}
+
+.hero-art{
+  width:390px;
+  height:390px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+  background:
+    radial-gradient(circle,#251020 0%,#100812 42%,transparent 70%);
+}
+
+.hero-art:before,
+.hero-art:after{
+  content:"";
+  position:absolute;
+  border-radius:50%;
+  border:1px solid rgba(255,23,79,.35);
+}
+
+.hero-art:before{
+  inset:15px;
+  animation:spin 12s linear infinite;
+}
+
+.hero-art:after{
+  inset:45px;
+  border-color:rgba(145,0,255,.4);
+  animation:spin 8s linear infinite reverse;
+}
+
+.power{
+  font-family:Orbitron,sans-serif;
+  font-size:75px;
+  color:#ff174f;
+  text-shadow:0 0 25px #ff174f,0 0 70px #7b00ff;
+  z-index:2;
+}
+
+@keyframes spin{
+  to{transform:rotate(360deg)}
+}
+
+.section{
+  padding:75px 7%;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.section-title small{
+  color:#ff285b;
+  letter-spacing:3px;
+  font-size:11px;
+}
+
+.section-title h2{
+  font-family:Orbitron,sans-serif;
+  font-size:30px;
+  margin-top:13px;
+}
+
+.section-title p{
+  color:#777;
+  font-size:13px;
+  margin-top:12px;
+}
+
+.cards{
+  max-width:1050px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:25px;
+}
+
+.card{
+  position:relative;
+  padding:35px;
+  background:linear-gradient(145deg,#111116,#09090d);
+  border:1px solid #25252e;
+  border-radius:18px;
+  overflow:hidden;
+  transition:.35s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  border-color:#ff174f;
+  box-shadow:0 15px 45px rgba(255,23,79,.12);
+}
+
+.card.premium{
+  border-color:rgba(255,23,79,.5);
+  background:linear-gradient(145deg,#171018,#0b090e);
+}
+
+.card.premium:before{
+  content:"PREMIUM";
+  position:absolute;
+  top:18px;
+  right:-35px;
+  transform:rotate(45deg);
+  width:145px;
+  text-align:center;
+  padding:5px;
+  font-size:9px;
+  letter-spacing:1px;
+  background:#ff174f;
+  color:#fff;
+}
+
+.card-icon{
+  width:55px;
+  height:55px;
+  border-radius:13px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:rgba(255,23,79,.1);
+  color:#ff285b;
+  font-size:25px;
+  margin-bottom:22px;
+}
+
+.card h3{
+  font-family:Orbitron,sans-serif;
+  font-size:21px;
+  margin-bottom:12px;
+}
+
+.card p{
+  color:#888;
+  font-size:13px;
+  line-height:1.8;
+  margin-bottom:20px;
+}
+
+.price{
+  font-family:Orbitron,sans-serif;
+  font-size:30px;
+  margin-bottom:22px;
+}
+
+.price small{
+  color:#777;
+  font-family:Poppins,sans-serif;
+  font-size:11px;
+  font-weight:400;
+}
+
+.features{
+  list-style:none;
+  margin-bottom:28px;
+}
+
+.features li{
+  color:#aaa;
+  font-size:12px;
+  margin:13px 0;
+}
+
+.features li:before{
+  content:"✓";
+  color:#ff285b;
+  margin-right:10px;
+  font-weight:bold;
+}
+
+.full-btn{
+  width:100%;
+}
+
+.contact{
+  text-align:center;
+  padding:70px 20px;
+  border-top:1px solid #17171e;
+}
+
+.contact h2{
+  font-family:Orbitron,sans-serif;
+  font-size:27px;
+  margin-bottom:15px;
+}
+
+.contact p{
+  color:#888;
+  font-size:13px;
+  margin-bottom:25px;
+}
+
+footer{
+  text-align:center;
+  padding:25px;
+  color:#555;
+  font-size:11px;
+  border-top:1px solid #15151b;
+}
+
+footer span{
+  color:#ff174f;
+}
+
+/* Modal */
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:100;
+  background:rgba(0,0,0,.8);
+  backdrop-filter:blur(10px);
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
+
+.modal-box{
+  width:100%;
+  max-width:440px;
+  background:#111116;
+  border:1px solid #3a202d;
+  border-radius:18px;
+  padding:30px;
+  position:relative;
+  box-shadow:0 0 50px rgba(255,23,79,.2);
+  animation:pop .25s ease;
+}
+
+@keyframes pop{
+  from{transform:scale(.9);opacity:0}
+  to{transform:scale(1);opacity:1}
+}
+
+.close{
+  position:absolute;
+  top:15px;
+  right:18px;
+  background:none;
+  border:none;
+  color:#aaa;
+  font-size:25px;
+  cursor:pointer;
+}
+
+.modal-box h2{
+  font-family:Orbitron,sans-serif;
+  font-size:21px;
+  margin-bottom:10px;
+}
+
+.modal-box p{
+  color:#888;
+  font-size:12px;
+  line-height:1.7;
+  margin-bottom:20px;
+}
+
+.pay-price{
+  text-align:center;
+  font-family:Orbitron,sans-serif;
+  font-size:35px;
+  color:#ff285b;
+  margin:20px 0;
+}
+
+.pay-option{
+  display:block;
+  width:100%;
+  margin:10px 0;
+  padding:14px;
+  border:1px solid #333;
+  border-radius:9px;
+  background:#191920;
+  color:#fff;
+  text-align:center;
+  text-decoration:none;
+  font-size:13px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.pay-option:hover{
+  border-color:#ff174f;
+  background:#21131b;
+}
+
+.note{
+  color:#666!important;
+  font-size:10px!important;
+  margin-top:15px;
+  margin-bottom:0!important;
+  text-align:center;
+}
+
+@media(max-width:800px){
+  nav{
+    display:none;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .hero{
+    min-height:auto;
+    padding-top:65px;
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .hero-content{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .hero-art{
+    width:280px;
+    height:280px;
+    margin-top:20px;
+  }
+
+  .power{
+    font-size:55px;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+    max-width:500px;
+  }
+}
+
+@media(max-width:450px){
+  header{
+    padding:18px 5%;
+  }
+
+  .section,.hero{
+    padding-left:5%;
+    padding-right:5%;
+  }
+
+  .card{
+    padding:25px;
+  }
+
+  h1{
+    font-size:38px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">INSANE <span>OPSS</span></div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#plans">Plans</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <button class="menu-btn" onclick="openPayment()">Buy</button>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="badge">NEXT LEVEL GAMING EXPERIENCE</div>
+
+    <h1>PLAY HARD.<br><span>DOMINATE.</span></h1>
+
+    <p>
+      Upgrade your gaming experience with premium sensitivity tools,
+      optimized settings and a smooth competitive setup.
+    </p>
+
+    <div class="buttons">
+      <a href="#plans" class="btn btn-primary">Explore Plans</a>
+      <a href="https://t.me/Insane_opss" target="_blank" class="btn btn-outline">
+        Telegram Support
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-art">
+    <div class="power">⚡</div>
+  </div>
+</section>
+
+<section class="section" id="plans">
+  <div class="section-title">
+    <small>CHOOSE YOUR EXPERIENCE</small>
+    <h2>OUR PLANS</h2>
+    <p>Simple plans made for serious gamers.</p>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-icon">◈</div>
+      <h3>FREE ACCESS</h3>
+      <p>Start your journey with basic gaming optimization features.</p>
+
+      <div class="price">₹0 <small>/ forever</small></div>
+
+      <ul class="features">
+        <li>Basic settings guide</li>
+        <li>Community access</li>
+        <li>Regular updates</li>
+        <li>Beginner support</li>
+      </ul>
+
+      <a href="https://t.me/Insane_opss" target="_blank" class="btn btn-outline full-btn">
+        Join Free
+      </a>
+    </div>
+
+    <div class="card premium">
+      <div class="card-icon">✦</div>
+      <h3>PREMIUM ACCESS</h3>
+      <p>Unlock the complete premium gaming setup and priority support.</p>
+
+      <div class="price">₹399 <small>/ one time</small></div>
+
+      <ul class="features">
+        <li>Premium sensitivity setup</li>
+        <li>Advanced optimization guide</li>
+        <li>Priority Telegram support</li>
+        <li>Future updates included</li>
+      </ul>
+
+      <button onclick="openPayment()" class="btn btn-primary full-btn">
+        Buy Premium — ₹399
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>NEED HELP?</h2>
+  <p>Contact our support team on Telegram for assistance.</p>
+
+  <a href="https://t.me/Insane_opss" target="_blank" class="btn btn-primary">
+    Contact Telegram
+  </a>
+</section>
+
+<footer>
+  © 2026 <span>INSANE OPSS</span>. All Rights Reserved.
+</footer>
+
+<!-- Payment Modal -->
+<div class="modal" id="paymentModal">
+  <div class="modal-box">
+    <button class="close" onclick="closePayment()">×</button>
+
+    <h2>PREMIUM PAYMENT</h2>
+    <p>Select your preferred UPI payment app below.</p>
+
+    <div class="pay-price">₹399</div>
+
+    <!-- Replace YOUR_UPI_ID@upi with your own UPI ID -->
+    <a
+      class="pay-option"
+      href="upi://pay?pa=YOUR_UPI_ID@upi&pn=INSANE%20OPSS&am=399&cu=INR">
+      💳 Pay with UPI / Google Pay
+    </a>
+
+    <a
+      class="pay-option"
+      href="upi://pay?pa=YOUR_UPI_ID@upi&pn=INSANE%20OPSS&am=399&cu=INR">
+      📱 Pay with PhonePe
+    </a>
+
+    <a
+      class="pay-option"
+      href="upi://pay?pa=YOUR_UPI_ID@upi&pn=INSANE%20OPSS&am=399&cu=INR">
+      🟣 Pay with Paytm / BHIM
+    </a>
+
+    <a
+      href="https://t.me/Insane_opss"
+      target="_blank"
+      class="pay-option">
+      ✅ Send Payment Screenshot on Telegram
+    </a>
+
+    <p class="note">
+      Replace YOUR_UPI_ID@upi with your correct UPI ID before publishing.
+      Payment verification should be done manually through Telegram.
+    </p>
+  </div>
+</div>
+
+<script>
+function openPayment(){
+  document.getElementById("paymentModal").style.display="flex";
+}
+
+function closePayment(){
+  document.getElementById("paymentModal").style.display="none";
+}
+
+window.onclick=function(event){
+  const modal=document.getElementById("paymentModal");
+  if(event.target===modal){
+    closePayment();
+  }
+}
+</script>
+
+</body>
+</html>
