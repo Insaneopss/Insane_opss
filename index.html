@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INSANE OPSS</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+:root{
+  --bg:#050507;
+  --card:#0b0b10;
+  --red:#ff1744;
+  --purple:#9b35ff;
+  --white:#f5f5f7;
+  --muted:#92929f;
+}
+
+body{
+  min-height:100vh;
+  color:var(--white);
+  font-family:Inter,Arial,sans-serif;
+  background:
+    radial-gradient(circle at 50% -15%,rgba(125,20,255,.18),transparent 38%),
+    radial-gradient(circle at 0% 50%,rgba(255,0,55,.08),transparent 35%),
+    #050507;
+  overflow-x:hidden;
+}
+
+.container{
+  width:min(1265px,calc(100% - 42px));
+  margin:auto;
+}
+
+header{
+  height:112px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid #191923;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  font-size:39px;
+  font-weight:900;
+  letter-spacing:-2px;
+}
+
+.logo-box{
+  width:68px;
+  height:68px;
+  border-radius:17px;
+  display:grid;
+  place-items:center;
+  border:1px solid #ff1744;
+  background:linear-gradient(135deg,#300510,#16030a);
+  box-shadow:0 0 24px rgba(255,0,50,.2);
+  font-size:27px;
+}
+
+.logo span{
+  color:#ff1744;
+}
+
+.menu{
+  width:68px;
+  height:68px;
+  border-radius:15px;
+  border:1px solid #292936;
+  background:#11111b;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+}
+
+.menu-lines,
+.menu-lines:before,
+.menu-lines:after{
+  width:28px;
+  height:3px;
+  border-radius:5px;
+  background:#ddd;
+  display:block;
+  position:relative;
+}
+
+.menu-lines:before,
+.menu-lines:after{
+  content:"";
+  position:absolute;
+  left:0;
+}
+
+.menu-lines:before{top:-9px}
+.menu-lines:after{top:9px}
+
+.hero{
+  position:relative;
+  min-height:312px;
+  margin-top:20px;
+  padding:45px 65px;
+  display:flex;
+  align-items:center;
+  border:1px solid #ff1744;
+  border-radius:21px;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 90% 50%,rgba(255,0,35,.2),transparent 48%),
+    linear-gradient(100deg,#10070a,#08080d);
+  box-shadow:
+    0 0 35px rgba(255,0,50,.08),
+    inset 0 0 50px rgba(255,0,40,.025);
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  width:600px;
+  height:600px;
+  right:-100px;
+  top:-150px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(255,0,30,.13),transparent 65%);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:600px;
+}
+
+.hero h1{
+  font-size:58px;
+  line-height:1;
+  letter-spacing:-3px;
+  font-weight:900;
+  margin-bottom:18px;
+}
+
+.hero h1 span{
+  color:#ff1744;
+}
+
+.hero p{
+  color:#b1b1c4;
+  font-size:18px;
+  line-height:1.65;
+  max-width:570px;
+  margin-bottom:24px;
+}
+
+.hero-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:270px;
+  padding:16px 25px;
+  border-radius:13px;
+  border:1px solid #ff1744;
+  background:linear-gradient(90deg,#360b13,#18080c);
+  color:white;
+  text-decoration:none;
+  font-size:17px;
+  font-weight:800;
+  box-shadow:0 0 20px rgba(255,0,45,.15);
+  transition:.3s;
+}
+
+.hero-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 0 30px rgba(255,0,45,.35);
+}.section-title{
+  margin:30px 0 20px;
+  font-size:25px;
+  font-weight:800;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+}
+
+.card{
+  position:relative;
+  min-height:385px;
+  padding:28px 38px;
+  border-radius:22px;
+  border:1px solid #ff1744;
+  background:
+    radial-gradient(circle at 90% 100%,rgba(255,0,50,.12),transparent 45%),
+    #09090e;
+  overflow:hidden;
+  transition:.35s;
+}
+
+.card:hover{
+  transform:translateY(-7px);
+  box-shadow:0 15px 40px rgba(255,0,50,.12);
+}
+
+.card.purple{
+  border-color:#a52cff;
+  background:
+    radial-gradient(circle at 90% 100%,rgba(140,0,255,.14),transparent 45%),
+    #09090e;
+}
+
+.card.purple:hover{
+  box-shadow:0 15px 40px rgba(140,0,255,.16);
+}
+
+.card-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:27px;
+}
+
+.card-icon{
+  width:65px;
+  height:65px;
+  display:grid;
+  place-items:center;
+  border-radius:16px;
+  font-size:27px;
+  border:1px solid #ff1744;
+  background:#210a10;
+}
+
+.purple .card-icon{
+  border-color:#a52cff;
+  background:#180a27;
+}
+
+.tag{
+  padding:12px 20px;
+  border-radius:25px;
+  font-size:12px;
+  font-weight:800;
+  color:#ff6684;
+  border:1px solid #ff1744;
+  background:#210a11;
+}
+
+.purple .tag{
+  color:#db9aff;
+  border-color:#a52cff;
+  background:#1c0c2c;
+}
+
+.card h2{
+  font-size:31px;
+  line-height:1.2;
+  text-transform:uppercase;
+  margin-bottom:12px;
+  letter-spacing:-1px;
+}
+
+.card h2 span{
+  color:#ff1744;
+}
+
+.purple h2 span{
+  color:#a52cff;
+}
+
+.card p{
+  color:#b0b0c1;
+  font-size:17px;
+  line-height:1.65;
+  max-width:500px;
+  margin-bottom:25px;
+}
+
+.card-btn{
+  position:absolute;
+  left:38px;
+  right:38px;
+  bottom:28px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:16px;
+  border-radius:13px;
+  text-decoration:none;
+  color:white;
+  font-size:17px;
+  font-weight:800;
+  border:1px solid #ff1744;
+  background:linear-gradient(90deg,#330a12,#17070c);
+  transition:.3s;
+}
+
+.card-btn:hover{
+  background:#4b0b18;
+}
+
+.purple .card-btn{
+  border-color:#a52cff;
+  background:linear-gradient(90deg,#210b3b,#100718);
+}
+
+.purple .card-btn:hover{
+  background:#321052;
+}
+
+footer{
+  margin-top:25px;
+  padding:20px 0 25px;
+  border-top:1px solid #1b1b25;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:16px;
+  color:#a1a1b0;
+  font-size:13px;
+}
+
+.socials{
+  display:flex;
+  gap:20px;
+}
+
+.social{
+  width:52px;
+  height:52px;
+  display:grid;
+  place-items:center;
+  border:1px solid #30303d;
+  border-radius:50%;
+  color:white;
+  text-decoration:none;
+  font-size:20px;
+  background:#11111a;
+  transition:.3s;
+}
+
+.social:hover{
+  border-color:#ff1744;
+  box-shadow:0 0 20px rgba(255,0,50,.2);
+}
+
+@media(max-width:800px){
+  .container{
+    width:calc(100% - 24px);
+  }
+
+  header{
+    height:82px;
+  }
+
+  .logo{
+    font-size:25px;
+    gap:10px;
+  }
+
+  .logo-box{
+    width:48px;
+    height:48px;
+    border-radius:12px;
+    font-size:20px;
+  }
+
+  .menu{
+    width:48px;
+    height:48px;
+  }
+
+  .hero{
+    min-height:390px;
+    padding:35px 25px;
+    margin-top:15px;
+  }
+
+  .hero h1{
+    font-size:42px;
+    letter-spacing:-2px;
+  }
+
+  .hero p{
+    font-size:14px;
+  }
+
+  .hero-btn{
+    min-width:100%;
+    font-size:14px;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .card{
+    min-height:330px;
+    padding:24px;
+  }
+
+  .card h2{
+    font-size:25px;
+  }
+
+  .card p{
+    font-size:14px;
+  }
+
+  .card-btn{
+    left:24px;
+    right:24px;
+    bottom:24px;
+  }
+  }</style>
+</head>
+
+<body>
+<div class="container">
+
+<header>
+  <div class="logo">
+    <div class="logo-box">⚡</div>
+    INSA<span>NE</span>
+  </div>
+
+  <button class="menu" onclick="toggleMenu()">
+    <span class="menu-lines"></span>
+  </button>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>INSANE <span>OPSS</span></h1>
+    <p>
+      Custom in-game sensitivity and touch optimizations
+      for Android & iOS devices.
+    </p>
+    <a href="#products" class="hero-btn">View Details　→</a>
+  </div>
+</section>
+
+<div class="section-title" id="products">
+  Featured Products
+</div>
+
+<section class="cards">
+
+  <div class="card">
+    <div class="card-top">
+      <div class="card-icon">♛</div>
+      <div class="tag">HOT RELEASE</div>
+    </div>
+
+    <h2>PREMIUM <span>SENSI</span></h2>
+
+    <p>
+      Custom in-game sensitivity and touch optimizations
+      for Android & iOS devices.
+    </p>
+
+    <a href="#" class="card-btn">View Details　→</a>
+  </div>
+
+  <div class="card purple">
+    <div class="card-top">
+      <div class="card-icon">◈</div>
+      <div class="tag">FREE ACCESS</div>
+    </div>
+
+    <h2>FREE <span>SENSI</span></h2>
+
+    <p>
+      Free basic sensitivity setup unlocked via short
+      ad completion.
+    </p>
+
+    <a href="#" class="card-btn">View Details　→</a>
+  </div>
+
+</section>
+
+<footer>
+  <div class="socials">
+    <a class="social" href="#">◎</a>
+    <a class="social" href="#">➤</a>
+  </div>
+
+  <div>
+    © 2026 INSANE. All Rights Reserved.
+    Not affiliated with game developers.
+  </div>
+</footer>
+
+</main>
+</div>
+
+<script>
+function toggleMenu(){
+  alert("Menu coming soon");
+}
+</script>
+
+</body>
+</html>
