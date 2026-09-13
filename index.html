@@ -707,6 +707,45 @@ footer span{
 }
 
 
+
+/* ===== SECOND PLAN: NEON COLORING ===== */
+.card.neon{
+  border-color:rgba(0,229,255,.48);
+  background:linear-gradient(145deg,#0d171a,#09090d);
+}
+.card.neon:hover{
+  border-color:#00e5ff;
+  box-shadow:0 15px 45px rgba(0,229,255,.16), 0 0 28px rgba(162,0,255,.10);
+}
+.card.neon .card-icon{
+  background:linear-gradient(135deg,rgba(0,229,255,.13),rgba(162,0,255,.14));
+  color:#00e5ff;
+  box-shadow:0 0 18px rgba(0,229,255,.12);
+}
+.card.neon .features li:before{
+  color:#00e5ff;
+}
+.card.neon .btn-primary{
+  background:linear-gradient(90deg,#00e5ff,#8a2be2);
+  box-shadow:0 0 22px rgba(0,229,255,.20);
+}
+.card.neon .btn-primary:hover{
+  box-shadow:0 0 30px rgba(0,229,255,.35),0 0 40px rgba(138,43,226,.20);
+}
+.card.neon .neon-badge{
+  position:absolute;
+  top:18px;
+  right:18px;
+  padding:6px 11px;
+  border:1px solid rgba(0,229,255,.55);
+  border-radius:999px;
+  color:#00e5ff;
+  font-size:9px;
+  letter-spacing:1px;
+  background:rgba(0,229,255,.06);
+  box-shadow:0 0 14px rgba(0,229,255,.12);
+}
+
 </style>
 </head>
 
@@ -742,7 +781,7 @@ footer span{
   <div class="section-title">
     <small>CHOOSE YOUR EXPERIENCE</small>
     <h2>OUR PLANS</h2>
-    <p>Simple plans made for serious gamers.</p>
+    <p>Simple access made for serious gamers.</p>
   </div>
 
   <div class="cards">
@@ -766,22 +805,23 @@ footer span{
       </a>
     </div>
 
-    <div class="card premium">
+    <div class="card neon">
+      <div class="neon-badge">NEW COLOR</div>
       <div class="card-icon">✦</div>
-      <h3>PREMIUM ACCESS</h3>
-      <p>Unlock the complete premium gaming setup and priority support.</p>
+      <h3>NEON ACCESS</h3>
+      <p>A fresh neon-colored premium panel with optimized gaming features.</p>
 
       <div class="price">₹399 <small>/ one time</small></div>
 
       <ul class="features">
         <li>Premium sensitivity setup</li>
         <li>Advanced optimization guide</li>
-        <li>Priority Telegram support</li>
+        <li>Telegram support</li>
         <li>Future updates included</li>
       </ul>
 
       <button onclick="openPayment()" class="btn btn-primary full-btn">
-        Buy Premium — ₹399
+        Buy Neon — ₹399
       </button>
     </div>
 
