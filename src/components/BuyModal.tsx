@@ -93,8 +93,13 @@ export const BuyModal: React.FC<BuyModalProps> = ({
                 </div>
 
                 <div className="mt-4 mb-5 rounded-xl border border-white/10 bg-white/5 p-3 text-center">
+<<<<<<< HEAD
                   <p className="text-sm text-white font-semibold">After payment, please take a screenshot of the successful payment.</p>
                   <p className="text-xs text-secondary-text mt-1">DM options will appear after you confirm the payment step.</p>
+=======
+                  <p className="text-sm text-white font-semibold">Payment ke baad screenshot zaroor lena.</p>
+                  <p className="text-xs text-secondary-text mt-1">DM options payment confirmation step ke baad hi visible honge.</p>
+>>>>>>> 8b95e48f31370c791796fd400e7f6b0c130a1612
                 </div>
 
                 <button
@@ -112,13 +117,22 @@ export const BuyModal: React.FC<BuyModalProps> = ({
                   <CheckCircle2 size={28} className="mx-auto text-green-400 mb-2" />
                   <p className="text-white font-bold">Payment step completed.</p>
                   <p className="text-secondary-text text-sm mt-1 leading-relaxed">
+<<<<<<< HEAD
                     Send your payment screenshot and exact phone model to Instagram or Telegram. After verification, your Premium Sensi Pack/file will be provided.
+=======
+                    Ab payment ka screenshot aur apna exact phone model Instagram ya Telegram par bhejo. Verification ke baad Premium Sensi Pack/file provide ki jayegi.
+>>>>>>> 8b95e48f31370c791796fd400e7f6b0c130a1612
                   </p>
                 </div>
 
                 <div className="text-center mb-3">
+<<<<<<< HEAD
                   <p className="text-white font-bold">Step 2: Send Screenshot</p>
                   <p className="text-secondary-text text-xs mt-1">Choose one of the DM options below and submit your payment screenshot.</p>
+=======
+                  <p className="text-white font-bold">Step 2: Screenshot Send Karo</p>
+                  <p className="text-secondary-text text-xs mt-1">Neeche kisi ek DM option par jao aur payment screenshot submit karo.</p>
+>>>>>>> 8b95e48f31370c791796fd400e7f6b0c130a1612
                 </div>
 
                 <div className="space-y-3 mb-5">
@@ -154,7 +168,11 @@ export const BuyModal: React.FC<BuyModalProps> = ({
 
             <div className="flex items-center justify-center gap-2 text-xs text-secondary-text bg-white/2 border border-white/5 py-2.5 px-4 rounded-xl">
               <ShieldCheck size={16} className="text-green-400 shrink-0" />
+<<<<<<< HEAD
               <span>Delivery after payment screenshot verification</span>
+=======
+              <span>Payment screenshot verification ke baad delivery</span>
+>>>>>>> 8b95e48f31370c791796fd400e7f6b0c130a1612
             </div>
           </motion.div>
         </div>
