@@ -1,0 +1,7 @@
+Updated artwork:
+- public/premium-cover.jpg = red INSANEX SENSI artwork
+- public/free-cover.jpg = purple INSANEX SENSI artwork
+- Source image copies and dist copies were updated too.
+
+The existing React/Vite code already references /premium-cover.jpg and /free-cover.jpg,
+so no component code changes were needed.
