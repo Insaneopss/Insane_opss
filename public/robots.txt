@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://insane-sensi.vercel.app/sitemap.xml
