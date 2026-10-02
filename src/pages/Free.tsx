@@ -19,7 +19,7 @@ export const Free: React.FC<FreeProps> = () => {
     >
       <div className="glass-card p-2 mb-8 max-w-md overflow-hidden group border-purple-500/30 hover:border-purple-500/60 shadow-[0_0_25px_rgba(123,46,218,0.2)] transition-all duration-300 rounded-2xl bg-black/40">
         <AnimatedImage
-          src="/free-cover.jpg"
+          src="/free-cover-v2.jpg"
           alt="INSANE Free Sensi Pack"
           theme="purple"
           containerClassName="rounded-xl overflow-hidden"

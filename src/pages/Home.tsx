@@ -45,7 +45,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         <div className="relative z-10 p-6 md:p-10 flex flex-col justify-center items-start max-w-xl">
           <div className="w-14 h-14 rounded-2xl overflow-hidden border border-[#FF0000]/60 bg-black p-0.5 shadow-[0_0_18px_rgba(255,0,0,0.4)] mb-4 shrink-0">
             <img
-              src="/premium-cover.jpg"
+              src="/premium-cover-v2.jpg"
               alt="INSANE"
               className="w-full h-full object-cover rounded-xl"
               referrerPolicy="no-referrer"
@@ -81,7 +81,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             <div className="flex items-center justify-between gap-3 mb-5">
               <div className="w-14 h-14 rounded-2xl overflow-hidden border border-[#FF0000]/60 bg-black p-0.5 shadow-[0_0_15px_rgba(255,0,0,0.35)] shrink-0">
                 <img
-                  src="/premium-cover.jpg"
+                  src="/premium-cover-v2.jpg"
                   alt="Premium Sensi"
                   className="w-full h-full object-cover rounded-xl"
                   referrerPolicy="no-referrer"
@@ -122,7 +122,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             <div className="flex items-center justify-between gap-3 mb-5">
               <div className="w-14 h-14 rounded-2xl overflow-hidden border border-purple-500/50 bg-black p-0.5 shadow-[0_0_15px_rgba(168,85,247,0.3)] shrink-0">
                 <img
-                  src="/free-cover.jpg"
+                  src="/free-cover-v2.jpg"
                   alt="Free Sensi"
                   className="w-full h-full object-cover rounded-xl"
                   referrerPolicy="no-referrer"

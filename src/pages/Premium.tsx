@@ -168,7 +168,7 @@ export const Premium: React.FC<PremiumProps> = ({ onNavigate, onOpenBuyModal }) 
           {/* Full Cover Showcase (Preserving full 1:1 image perfectly) */}
           <div className="p-3 md:p-6 bg-gradient-to-b from-white/[0.04] to-transparent flex items-center justify-center">
             <AnimatedImage
-              src="/premium-cover.jpg"
+              src="/premium-cover-v2.jpg"
               alt="Premium Sensi"
               theme="accent"
               containerClassName="rounded-xl md:rounded-2xl overflow-hidden aspect-square w-full max-w-md md:max-w-lg shadow-[0_0_35px_rgba(255,0,0,0.3)] border border-[#FF0000]/40"

@@ -32,7 +32,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentRoute, onNavigate }) => {
         >
           <div className="w-10 h-10 rounded-xl overflow-hidden border border-[#FF0000]/50 bg-black p-0.5 shadow-[0_0_15px_rgba(255,0,0,0.4)] shrink-0">
             <img
-              src="/premium-cover.jpg"
+              src="/premium-cover-v2.jpg"
               alt="INSANE"
               className="w-full h-full object-cover rounded-lg"
             />
